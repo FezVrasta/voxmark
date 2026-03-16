@@ -20,7 +20,7 @@ const HeroSection = () => {
           className="text-center max-w-2xl mx-auto mb-16"
         >
           <div className="flex items-center justify-center gap-3 mb-8">
-            <img src={appIcon} alt="VoxMark app icon" className="w-14 h-14 rounded-2xl" />
+            <img src={appIcon} alt="VoxMark app icon" className="w-14 h-14 rounded-xl" />
             <span className="font-display text-2xl font-bold text-foreground">VoxMark</span>
           </div>
 

@@ -17,7 +17,7 @@ const CtaSection = () => {
           </div>
 
           <div className="relative z-10">
-            <img src={appIcon} alt="VoxMark" className="w-20 h-20 rounded-3xl mx-auto mb-8 shadow-glow" />
+            <img src={appIcon} alt="VoxMark" className="w-20 h-20 rounded-2xl mx-auto mb-8 shadow-glow" />
             <h2 className="text-3xl md:text-5xl font-display font-bold mb-4">
               Ready to own your performance?
             </h2>
