@@ -44,7 +44,7 @@ const HeroSection = () => {
           </a>
 
           <p className="mt-4 text-sm text-muted-foreground">
-            Free forever · No ads · No account required
+            Free · No ads · No account required
           </p>
         </motion.div>
 
