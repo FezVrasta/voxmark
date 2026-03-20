@@ -1,12 +1,12 @@
 import { motion } from "framer-motion";
-import screenshotSongs from "@/assets/screenshot-songs.png";
-import screenshotLesson from "@/assets/screenshot-lesson.png";
-import screenshotNewSong from "@/assets/screenshot-newsong.png";
+import screenshotSong from "@/assets/screenshot-song.png";
+import screenshotAnnotations from "@/assets/screenshot-annotations.png";
+import screenshotLessons from "@/assets/screenshot-lessons.png";
 
 const screens = [
-  { src: screenshotSongs, alt: "Song library with album art and lyrics preview", label: "Song Library" },
-  { src: screenshotLesson, alt: "Lesson recording with timestamped markers", label: "Lesson Recorder" },
-  { src: screenshotNewSong, alt: "Add new song with lyrics import", label: "Quick Add" },
+  { src: screenshotSong, alt: "Song lyrics with colored background", label: "Lyrics View" },
+  { src: screenshotAnnotations, alt: "Lyrics with vocal annotations and technique cues", label: "Annotations" },
+  { src: screenshotLessons, alt: "Lesson recordings list with durations and markers", label: "Lessons" },
 ];
 
 const ScreenshotsSection = () => {
