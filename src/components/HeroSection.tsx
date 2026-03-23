@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import appIcon from "@/assets/app-icon.png";
 import screenshotSongsNew from "@/assets/screenshot-songs-new.png";
 import screenshotAnnotatedSong from "@/assets/screenshot-annotated-song.png";
-import screenshotSetlist from "@/assets/screenshot-setlist.png";
+import screenshotLessonRec from "@/assets/screenshot-lesson-rec.png";
 
 const HeroSection = () => {
   return (
