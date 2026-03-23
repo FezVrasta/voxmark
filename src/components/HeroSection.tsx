@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
 import appIcon from "@/assets/app-icon.png";
-import screenshotLyrics from "@/assets/screenshot-lyrics.png";
-import screenshotSongs from "@/assets/screenshot-songs.png";
-import screenshotLesson from "@/assets/screenshot-lesson.png";
+import screenshotSongsNew from "@/assets/screenshot-songs-new.png";
+import screenshotAnnotatedSong from "@/assets/screenshot-annotated-song.png";
+import screenshotSetlist from "@/assets/screenshot-setlist.png";
 
 const HeroSection = () => {
   return (
@@ -12,7 +12,6 @@ const HeroSection = () => {
       </div>
 
       <div className="container relative z-10 py-24 lg:py-32">
-        {/* Top: Copy */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -48,12 +47,11 @@ const HeroSection = () => {
           </p>
         </motion.div>
 
-        {/* Bottom: 3 Phone mockups */}
         <div className="flex justify-center items-end gap-4 md:gap-8">
           {[
-            { src: screenshotSongs, alt: "Song library", delay: 0.2, scale: 0.9 },
-            { src: screenshotLyrics, alt: "Lyrics with annotations", delay: 0.1, scale: 1 },
-            { src: screenshotLesson, alt: "Lesson recorder", delay: 0.3, scale: 0.9 },
+            { src: screenshotSongsNew, alt: "Song library", delay: 0.2, scale: 0.9 },
+            { src: screenshotAnnotatedSong, alt: "Annotated lyrics", delay: 0.1, scale: 1 },
+            { src: screenshotSetlist, alt: "Setlist planner", delay: 0.3, scale: 0.9 },
           ].map((phone, i) => (
             <motion.div
               key={phone.alt}
