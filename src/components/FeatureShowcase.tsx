@@ -26,8 +26,11 @@ const FeatureShowcase = ({
     <section className="relative py-24 lg:py-32 bg-background overflow-hidden">
       {backgroundImage && (
         <div className="absolute inset-0">
-          <img src={backgroundImage} alt="" className="w-full h-full object-cover opacity-20" />
-          <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-background/60" />
+          <img src={backgroundImage} alt="" className="w-full h-full object-cover opacity-70" />
+          <div className="absolute inset-0" style={{
+            background: "radial-gradient(ellipse 90% 80% at 50% 50%, transparent 40%, hsl(var(--background)) 85%)"
+          }} />
+          <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/80" />
         </div>
       )}
       <div className="container relative z-10">
