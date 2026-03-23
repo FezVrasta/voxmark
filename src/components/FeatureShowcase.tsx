@@ -9,6 +9,7 @@ interface FeatureShowcaseProps {
   screenshots: { src: string; alt: string }[];
   reverse?: boolean;
   badge?: string;
+  backgroundImage?: string;
 }
 
 const FeatureShowcase = ({
