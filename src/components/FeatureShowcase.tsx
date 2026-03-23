@@ -30,7 +30,7 @@ const FeatureShowcase = ({
           <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-background/60" />
         </div>
       )}
-      <div className="container">
+      <div className="container relative z-10">
         <div
           className={`flex flex-col ${
             reverse ? "lg:flex-row-reverse" : "lg:flex-row"
