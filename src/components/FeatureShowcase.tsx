@@ -30,7 +30,7 @@ const FeatureShowcase = ({
           <div className="absolute inset-0" style={{
             background: "radial-gradient(ellipse 90% 80% at 50% 50%, transparent 40%, hsl(var(--background)) 85%)"
           }} />
-          <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/80" />
+          <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background" />
         </div>
       )}
       <div className="container relative z-10">
