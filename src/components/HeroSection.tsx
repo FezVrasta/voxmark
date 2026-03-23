@@ -51,7 +51,7 @@ const HeroSection = () => {
           {[
             { src: screenshotSongsNew, alt: "Song library", delay: 0.2, scale: 0.9 },
             { src: screenshotAnnotatedSong, alt: "Annotated lyrics", delay: 0.1, scale: 1 },
-            { src: screenshotSetlist, alt: "Setlist planner", delay: 0.3, scale: 0.9 },
+            { src: screenshotLessonRec, alt: "Lesson recorder", delay: 0.3, scale: 0.9 },
           ].map((phone, i) => (
             <motion.div
               key={phone.alt}
