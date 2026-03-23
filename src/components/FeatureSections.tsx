@@ -10,6 +10,7 @@ import screenshotSetlist from "@/assets/screenshot-setlist.png";
 import screenshotSetlistCue from "@/assets/screenshot-setlist-cue.png";
 import screenshotLessonRec from "@/assets/screenshot-lesson-rec.png";
 import screenshotLessonDetail from "@/assets/screenshot-lesson-detail.png";
+import stagePhoto from "@/assets/stage-photo.png";
 
 const FeatureSections = () => {
   return (
@@ -47,23 +48,6 @@ const FeatureSections = () => {
         reverse
       />
 
-      {/* Setlists — NEW */}
-      <FeatureShowcase
-        title="Plan your"
-        highlight="show"
-        description="Build setlists with songs and stage cues, see estimated duration, tempo ranges, and keys at a glance. Then perform with a guided cue-by-cue playback."
-        bullets={[
-          { icon: ListMusic, text: "Combine songs and stage cues (walk on stage, introduce band) into a single flow" },
-          { icon: Timer, text: "Estimated total duration, tempo range, and key overview per setlist" },
-          { icon: Mic, text: "Cue-by-cue playback mode guides you through the entire show" },
-        ]}
-        screenshots={[
-          { src: screenshotSetlist, alt: "Setlist overview with stats" },
-          { src: screenshotSetlistCue, alt: "Stage cue during playback" },
-        ]}
-        badge="New"
-      />
-
       {/* Lessons */}
       <FeatureShowcase
         title="Record every"
@@ -78,7 +62,25 @@ const FeatureSections = () => {
           { src: screenshotLessonRec, alt: "Lesson recording with markers" },
           { src: screenshotLessonDetail, alt: "Lesson playback with waveform" },
         ]}
+      />
+
+      {/* Setlists — last */}
+      <FeatureShowcase
+        title="Plan your"
+        highlight="show"
+        description="Build setlists with songs and stage cues, see estimated duration, tempo ranges, and keys at a glance. Then perform with a guided cue-by-cue playback."
+        bullets={[
+          { icon: ListMusic, text: "Combine songs and stage cues (walk on stage, introduce band) into a single flow" },
+          { icon: Timer, text: "Estimated total duration, tempo range, and key overview per setlist" },
+          { icon: Mic, text: "Cue-by-cue playback mode guides you through the entire show" },
+        ]}
+        screenshots={[
+          { src: screenshotSetlist, alt: "Setlist overview with stats" },
+          { src: screenshotSetlistCue, alt: "Stage cue during playback" },
+        ]}
         reverse
+        badge="New"
+        backgroundImage={stagePhoto}
       />
     </>
   );
