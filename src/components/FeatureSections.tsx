@@ -16,7 +16,7 @@ const FeatureSections = () => {
     <>
       {/* Songs & Lyrics */}
       <FeatureShowcase
-        title="Your entire setlist,"
+        title="Your entire songbook,"
         highlight="organized"
         description="Import or type your lyrics, add song details like BPM, key, and time signature — then browse everything in a clean, visual library."
         bullets={[
