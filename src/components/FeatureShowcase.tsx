@@ -20,9 +20,16 @@ const FeatureShowcase = ({
   screenshots,
   reverse = false,
   badge,
+  backgroundImage,
 }: FeatureShowcaseProps) => {
   return (
-    <section className="py-24 lg:py-32 bg-background overflow-hidden">
+    <section className="relative py-24 lg:py-32 bg-background overflow-hidden">
+      {backgroundImage && (
+        <div className="absolute inset-0">
+          <img src={backgroundImage} alt="" className="w-full h-full object-cover opacity-20" />
+          <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-background/60" />
+        </div>
+      )}
       <div className="container">
         <div
           className={`flex flex-col ${
