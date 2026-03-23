@@ -22,7 +22,7 @@ const FeatureSections = () => {
         bullets={[
           { icon: Music, text: "Full song library with album art, BPM, key, and time signature metadata" },
           { icon: Type, text: "Large, readable lyrics designed for stage and practice — swipe between pages effortlessly" },
-          { icon: Palette, text: "Custom background colors per song so you can spot them at a glance" },
+          { icon: Palette, text: "Pulls album art from Apple Music and lyrics from Genius — just search and import" },
         ]}
         screenshots={[
           { src: screenshotSongsNew, alt: "Songs library with metadata" },
