@@ -75,6 +75,7 @@ const FeatureSections = () => {
           { icon: ListMusic, text: "Combine songs and stage cues (walk on stage, introduce band) into a single flow" },
           { icon: Timer, text: "Estimated total duration, tempo range, and key overview per setlist" },
           { icon: Mic, text: "Cue-by-cue playback mode guides you through the entire show" },
+          { icon: Palette, text: "Full dark-mode support keeps your screen glare-free on stage" },
         ]}
         screenshots={[
           { src: screenshotSetlist, alt: "Setlist overview with stats" },
