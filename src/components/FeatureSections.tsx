@@ -24,6 +24,7 @@ const FeatureSections = () => {
           { icon: Music, text: "Full song library with album art, BPM, key, and time signature metadata" },
           { icon: Type, text: "Large, readable lyrics designed for stage and practice — swipe between pages effortlessly" },
           { icon: Palette, text: "Pulls album art from Apple Music and lyrics from Genius — just search and import" },
+          { icon: Music, text: "Share songs with bandmates or students so everyone stays on the same page" },
         ]}
         screenshots={[
           { src: screenshotSongsNew, alt: "Songs library with metadata" },
@@ -57,6 +58,7 @@ const FeatureSections = () => {
           { icon: Mic, text: "One-tap lesson recording with category markers: warm-up, exercise, song, explanation, break" },
           { icon: Bookmark, text: "Timestamped markers let you jump to any section of a past lesson instantly" },
           { icon: Clock, text: "Full waveform playback with 15-second skip and all your markers listed below" },
+          { icon: Mic, text: "Share lesson recordings with your teacher or students for review anytime" },
         ]}
         screenshots={[
           { src: screenshotLessonRec, alt: "Lesson recording with markers" },
