@@ -58,6 +58,7 @@ const FeatureSections = () => {
           { icon: Mic, text: "One-tap lesson recording with category markers: warm-up, exercise, song, explanation, break" },
           { icon: Bookmark, text: "Timestamped markers let you jump to any section of a past lesson instantly" },
           { icon: Clock, text: "Full waveform playback with 15-second skip and all your markers listed below" },
+          { icon: Mic, text: "Share lesson recordings with your teacher or students for review anytime" },
         ]}
         screenshots={[
           { src: screenshotLessonRec, alt: "Lesson recording with markers" },
