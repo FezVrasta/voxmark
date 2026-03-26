@@ -25,7 +25,7 @@ const CtaSection = () => {
               Download VoxMark for free and turn your lyrics into a living, breathing vocal guide.
             </p>
             <a
-              href="#"
+              href="https://apple.co/3NNYhjl"
               className="inline-flex items-center justify-center gap-2 rounded-full bg-foreground text-background px-8 py-4 font-display font-semibold text-base hover:opacity-90 transition-opacity"
             >
               <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
