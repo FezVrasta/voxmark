@@ -85,7 +85,6 @@ const FeatureSections = () => {
           { src: screenshotSetlist, alt: "Setlist overview with stats" },
           { src: screenshotSetlistCue, alt: "Stage cue during playback" },
         ]}
-        reverse
         badge="New"
         backgroundImage={stagePhoto}
       />
