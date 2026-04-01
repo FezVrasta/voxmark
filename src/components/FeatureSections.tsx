@@ -69,6 +69,9 @@ const FeatureSections = () => {
         ]}
       />
 
+      {/* Export — card grid layout for visual break */}
+      <ExportSection />
+
       {/* Apple Watch & Widgets */}
       <WatchSection />
 
