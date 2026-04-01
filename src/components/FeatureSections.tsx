@@ -49,6 +49,7 @@ const FeatureSections = () => {
           { src: screenshotAnnotateSheet, alt: "Annotation sheet with tag options" },
         ]}
         reverse
+        darkBg
       />
 
       {/* Lessons */}
