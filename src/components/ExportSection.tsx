@@ -10,7 +10,7 @@ const features = [
   {
     icon: Scissors,
     title: "Session Clips",
-    description: "Trim and export specific moments from your lesson recordings. Save that perfect vocal run or coaching tip as a standalone clip you can revisit anytime.",
+    description: "Export specific moments from your lesson recordings as standalone clips. Save that perfect vocal run or coaching tip to revisit anytime.",
   },
   {
     icon: Share2,
