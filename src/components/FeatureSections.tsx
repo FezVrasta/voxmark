@@ -56,12 +56,11 @@ const FeatureSections = () => {
       <FeatureShowcase
         title="Your personal"
         highlight="studio"
-        description="Record lessons, practice sessions, or gigs with one tap. Add timestamped markers for warm-ups, exercises, songs, and key moments so you can jump right back to what matters."
+        description="Record lessons, practice sessions, or gigs with one tap. Add timestamped markers so you can jump back to any moment instantly."
         bullets={[
-          { icon: Mic, text: "One-tap recording for lessons, practice, or gigs — with category markers like warm-up, exercise, song, and note" },
-          { icon: Bookmark, text: "Timestamped markers let you jump to any section of a past session instantly" },
-          { icon: Clock, text: "Full waveform playback with 15-second skip and all your markers listed below" },
-          { icon: Mic, text: "Share recordings with your teacher or students for review anytime" },
+          { icon: Mic, text: "One-tap recording with category markers — warm-up, exercise, song, note, and more" },
+          { icon: Clock, text: "Interactive waveform playback with long-press zoom, precision scrubbing, and 15-second skip" },
+          { icon: Bookmark, text: "Share recordings with your teacher or students for review anytime" },
         ]}
         screenshots={[
           { src: screenshotLessonRec, alt: "Lesson recording with markers" },
