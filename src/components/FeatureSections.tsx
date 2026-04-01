@@ -1,6 +1,7 @@
 import { Music, Palette, Type, Clock, Mic, Bookmark, ListMusic, Timer, Volume2, Watch } from "lucide-react";
 import FeatureShowcase from "./FeatureShowcase";
 import WatchSection from "./WatchSection";
+import ExportSection from "./ExportSection";
 
 import screenshotSongsNew from "@/assets/screenshot-songs-new.png";
 import screenshotSongPlain from "@/assets/screenshot-song-plain.png";
@@ -48,6 +49,7 @@ const FeatureSections = () => {
           { src: screenshotAnnotateSheet, alt: "Annotation sheet with tag options" },
         ]}
         reverse
+        darkBg
       />
 
       {/* Lessons */}
@@ -66,6 +68,9 @@ const FeatureSections = () => {
           { src: screenshotLessonDetail, alt: "Lesson playback with waveform" },
         ]}
       />
+
+      {/* Export — card grid layout for visual break */}
+      <ExportSection />
 
       {/* Apple Watch & Widgets */}
       <WatchSection />
