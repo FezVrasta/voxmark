@@ -52,16 +52,16 @@ const FeatureSections = () => {
         darkBg
       />
 
-      {/* Lessons */}
+      {/* Studio */}
       <FeatureShowcase
-        title="Record every"
-        highlight="lesson"
-        description="Capture vocal lessons with one tap. Add timestamped markers for warm-ups, exercises, songs, and key moments so you can jump right back to what matters."
+        title="Your personal"
+        highlight="studio"
+        description="Record lessons, practice sessions, or gigs with one tap. Add timestamped markers for warm-ups, exercises, songs, and key moments so you can jump right back to what matters."
         bullets={[
-          { icon: Mic, text: "One-tap lesson recording with category markers: warm-up, exercise, song, explanation, break" },
-          { icon: Bookmark, text: "Timestamped markers let you jump to any section of a past lesson instantly" },
+          { icon: Mic, text: "One-tap recording for lessons, practice, or gigs — with category markers like warm-up, exercise, song, and note" },
+          { icon: Bookmark, text: "Timestamped markers let you jump to any section of a past session instantly" },
           { icon: Clock, text: "Full waveform playback with 15-second skip and all your markers listed below" },
-          { icon: Mic, text: "Share lesson recordings with your teacher or students for review anytime" },
+          { icon: Mic, text: "Share recordings with your teacher or students for review anytime" },
         ]}
         screenshots={[
           { src: screenshotLessonRec, alt: "Lesson recording with markers" },
