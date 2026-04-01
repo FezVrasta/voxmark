@@ -6,7 +6,7 @@ import screenshotWatchSongs from "@/assets/screenshot-watch-songs.png";
 
 const WatchSection = () => {
   return (
-    <section className="relative py-24 lg:py-32 bg-background overflow-hidden">
+    <section className="relative py-24 lg:py-32 bg-card/30 overflow-hidden">
       <div className="container relative z-10">
         <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
           {/* Watch screenshots */}
