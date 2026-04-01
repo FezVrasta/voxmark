@@ -10,6 +10,7 @@ interface FeatureShowcaseProps {
   reverse?: boolean;
   badge?: string;
   backgroundImage?: string;
+  darkBg?: boolean;
 }
 
 const FeatureShowcase = ({
