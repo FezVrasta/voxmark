@@ -22,9 +22,10 @@ const FeatureShowcase = ({
   reverse = false,
   badge,
   backgroundImage,
+  darkBg = false,
 }: FeatureShowcaseProps) => {
   return (
-    <section className="relative py-24 lg:py-32 bg-background overflow-hidden">
+    <section className={`relative py-24 lg:py-32 overflow-hidden ${darkBg ? "bg-card/30" : "bg-background"}`}>
       {backgroundImage && (
         <div className="absolute inset-0">
           <img src={backgroundImage} alt="" className="w-full h-full object-cover opacity-70" />
