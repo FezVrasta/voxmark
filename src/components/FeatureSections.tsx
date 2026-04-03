@@ -75,6 +75,9 @@ const FeatureSections = () => {
       {/* Apple Watch & Widgets */}
       <WatchSection />
 
+      {/* iPad */}
+      <IpadSection />
+
       {/* Setlists — last */}
       <FeatureShowcase
         title="Plan your"
