@@ -1,9 +1,16 @@
-import { motion } from "framer-motion";
-import { Tablet, Layout } from "lucide-react";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import ipadSongs from "@/assets/ipad-songs.png";
 import ipadStudio from "@/assets/ipad-studio.png";
 
+const tabs = [
+  { id: "songs", label: "Songs & Annotations", src: ipadSongs, alt: "iPad song library with annotated lyrics" },
+  { id: "studio", label: "Studio", src: ipadStudio, alt: "iPad studio recording with waveform" },
+];
+
 const IpadSection = () => {
+  const [active, setActive] = useState(0);
+
   return (
     <section className="py-24 lg:py-32 bg-card/30 overflow-hidden">
       <div className="container">
@@ -11,7 +18,7 @@ const IpadSection = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-6"
+          className="text-center mb-10"
         >
           <span className="inline-block text-xs font-display font-semibold tracking-widest uppercase text-primary mb-4 px-3 py-1 rounded-full border border-primary/30 bg-primary/5">
             iPad
@@ -24,34 +31,46 @@ const IpadSection = () => {
           </p>
         </motion.div>
 
-        <div className="flex flex-col md:flex-row items-start gap-3 md:gap-4 mt-12">
-          {[
-            { src: ipadSongs, alt: "iPad song library with annotated lyrics", icon: Layout, label: "Songs & Annotations" },
-            { src: ipadStudio, alt: "iPad studio recording with waveform", icon: Tablet, label: "Studio" },
-          ].map((item, i) => (
-            <motion.div
-              key={item.label}
-              initial={{ opacity: 0, y: 24 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: i * 0.15 }}
-              className="flex-1 w-full"
+        {/* Tab switcher */}
+        <div className="flex justify-center gap-2 mb-8">
+          {tabs.map((tab, i) => (
+            <button
+              key={tab.id}
+              onClick={() => setActive(i)}
+              className={`px-5 py-2 rounded-full text-sm font-display font-medium transition-colors ${
+                active === i
+                  ? "bg-primary text-primary-foreground"
+                  : "bg-muted/50 text-muted-foreground hover:text-foreground"
+              }`}
             >
-              <div className="rounded-2xl overflow-hidden border border-border bg-background/50 shadow-lg">
-                <img
-                  src={item.src}
-                  alt={item.alt}
-                  className="w-full h-auto"
-                  loading="lazy"
-                />
-              </div>
-              <div className="flex items-center justify-center gap-2 mt-3">
-                <item.icon className="w-4 h-4 text-primary" />
-                <span className="text-sm font-display font-medium text-muted-foreground">{item.label}</span>
-              </div>
-            </motion.div>
+              {tab.label}
+            </button>
           ))}
         </div>
+
+        {/* Screenshot display */}
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="max-w-4xl mx-auto"
+        >
+          <div className="rounded-2xl overflow-hidden border border-border bg-background/50 shadow-lg">
+            <AnimatePresence mode="wait">
+              <motion.img
+                key={tabs[active].id}
+                src={tabs[active].src}
+                alt={tabs[active].alt}
+                className="w-full h-auto"
+                loading="lazy"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.25 }}
+              />
+            </AnimatePresence>
+          </div>
+        </motion.div>
       </div>
     </section>
   );
