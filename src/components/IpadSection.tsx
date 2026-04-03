@@ -55,13 +55,13 @@ const IpadSection = () => {
           viewport={{ once: true }}
           className="max-w-4xl mx-auto"
         >
-          <div className="rounded-2xl overflow-hidden border border-border bg-background/50 shadow-lg flex justify-center">
+          <div className="rounded-2xl overflow-hidden border border-border bg-background/50 shadow-lg w-fit mx-auto max-h-[70vh]">
             <AnimatePresence mode="wait">
               <motion.img
                 key={tabs[active].id}
                 src={tabs[active].src}
                 alt={tabs[active].alt}
-                className="w-full h-auto max-h-[70vh] object-contain"
+                className="h-auto max-h-[70vh] w-auto max-w-full"
                 loading="lazy"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
