@@ -2,6 +2,7 @@ import { Music, Palette, Type, Clock, Mic, Bookmark, ListMusic, Timer, Volume2, 
 import FeatureShowcase from "./FeatureShowcase";
 import WatchSection from "./WatchSection";
 import ExportSection from "./ExportSection";
+import IpadSection from "./IpadSection";
 
 import screenshotSongsNew from "@/assets/screenshot-songs-new.png";
 import screenshotSongPlain from "@/assets/screenshot-song-plain.png";
