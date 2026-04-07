@@ -38,7 +38,7 @@ const FeatureSections = () => {
       {/* Annotations */}
       <FeatureShowcase
         title="Your Lyrics,"
-        highlight="your voice"
+        highlight="Your Voice"
         description="Select any word or phrase and tag it with color-coded annotations for breathing, technique, dynamics, and emotion. Add voice notes for extra context."
         bullets={[
           { icon: Palette, text: "Color-coded tags: Breath, Technique, Dynamics, Emotion — each instantly recognizable" },
