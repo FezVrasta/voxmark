@@ -25,7 +25,7 @@ const HeroSection = () => {
 
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold leading-[1.05] mb-6">
             Your lyrics,{" "}
-            <span className="text-gradient">your roadmap</span>
+            <span className="text-gradient">your voice</span>
           </h1>
 
           <p className="text-lg md:text-xl text-muted-foreground max-w-lg mx-auto mb-10 leading-relaxed">
