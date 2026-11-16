@@ -1,11 +1,15 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import ipadSongs from "@/assets/ipad-songs.png";
-import ipadStudio from "@/assets/ipad-studio.png";
+import ipadPitch from "@/assets/v2/ipad-pitch.png";
+import ipadMixer from "@/assets/v2/ipad-mixer.png";
+import ipadVoiceFit from "@/assets/v2/ipad-voicefit.png";
+import ipadNewSong from "@/assets/v2/ipad-newsong.png";
 
 const tabs = [
-  { id: "songs", label: "Songs & Annotations", src: ipadSongs, alt: "iPad song library with annotated lyrics" },
-  { id: "studio", label: "Studio", src: ipadStudio, alt: "iPad studio recording with waveform" },
+  { id: "pitch", label: "Lyrics & Pitch", src: ipadPitch, alt: "iPad lyrics with live pitch" },
+  { id: "mixer", label: "Mixer", src: ipadMixer, alt: "iPad mixer with separated parts" },
+  { id: "voicefit", label: "Voice Fit", src: ipadVoiceFit, alt: "iPad Voice Fit range and tessitura" },
+  { id: "newsong", label: "New Song", src: ipadNewSong, alt: "iPad new song with cover and details" },
 ];
 
 const IpadSection = () => {
@@ -27,7 +31,7 @@ const IpadSection = () => {
             Made for the <span className="text-gradient">big screen</span>
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Full split-view layouts on iPad let you browse your library and read lyrics side by side, or record a session with all your markers visible at once.
+            Lyrics, the mixer and Voice Fit get the room of a full-size screen.
           </p>
         </motion.div>
 
