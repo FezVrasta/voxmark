@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Music, Mic, Clock, Palette } from "lucide-react";
+import { Layers, Mic, Activity, Palette } from "lucide-react";
 
 const features = [
   {
@@ -8,9 +8,9 @@ const features = [
     description: "Mark breathing, dynamics, and technique with granular, color-coded tags right on your lyrics.",
   },
   {
-    icon: Clock,
-    title: "Tap-to-Time Sync",
-    description: "Sync lyrics to your own pace with a simple tap interface. Auto-scroll follows you in real-time.",
+    icon: Layers,
+    title: "Stem Separation",
+    description: "Split any song into vocals and instruments on your device, then mix each part with its own fader.",
   },
   {
     icon: Mic,
@@ -18,9 +18,9 @@ const features = [
     description: "Record vocal lessons with timestamped markers so you can revisit key moments instantly.",
   },
   {
-    icon: Music,
-    title: "Visual Vocal Cues",
-    description: "Use wavy, stretched, or high/low text styling to visualize the nuances of your voice.",
+    icon: Activity,
+    title: "Live Pitch and Voice Fit",
+    description: "See your pitch on the lyrics and find the key that fits your range.",
   },
 ];
 

@@ -1,4 +1,4 @@
-import { Music, Palette, Type, Clock, Mic, Bookmark, ListMusic, Timer, Volume2, Watch } from "lucide-react";
+import { Layers, SlidersHorizontal, Disc3, Activity, Target, Car, Music, Palette, Type, Clock, Mic, Bookmark, ListMusic, Timer, Volume2, Watch } from "lucide-react";
 import FeatureShowcase from "./FeatureShowcase";
 import WatchSection from "./WatchSection";
 import ExportSection from "./ExportSection";
@@ -13,9 +13,16 @@ import screenshotSetlist from "@/assets/screenshot-setlist.png";
 import screenshotSetlistCue from "@/assets/screenshot-setlist-cue.png";
 import screenshotLessonRec from "@/assets/screenshot-lesson-rec.png";
 import screenshotLessonDetail from "@/assets/screenshot-lesson-detail.png";
+import { usePlatform } from "@/context/Platform";
+import { shot } from "@/assets/v2";
 import stagePhoto from "@/assets/stage-photo.png";
 
 const FeatureSections = () => {
+  const { platform } = usePlatform();
+  const ios = platform === "ios";
+  const s = (name: Parameters<typeof shot>[1]) => shot(platform, name);
+  const car = ios ? "CarPlay" : "Android Auto";
+
   return (
     <>
       {/* Songs & Lyrics */}
@@ -30,9 +37,42 @@ const FeatureSections = () => {
           { icon: Music, text: "Share songs with bandmates or students so everyone stays on the same page" },
         ]}
         screenshots={[
-          { src: screenshotSongsNew, alt: "Songs library with metadata" },
-          { src: screenshotSongPlain, alt: "Clean lyrics view" },
+          { src: ios ? screenshotSongsNew : s("new-song"), alt: "Songs library with metadata" },
+          { src: ios ? screenshotSongPlain : s("song-pitch"), alt: "Clean lyrics view" },
         ]}
+      />
+
+      <FeatureShowcase
+        title="Take any song"
+        highlight="apart"
+        description="Pick an audio file and VoxMark separates the vocals, drums, bass and the rest on your device. Then practice against a mixer with a fader for every part."
+        bullets={[
+          { icon: Layers, text: "Separate vocals and instruments in one pass, no upload needed" },
+          { icon: SlidersHorizontal, text: "Mute, solo and balance each part, and shift the key in semitones to fit your voice" },
+          { icon: Disc3, text: "Recognizes the track and fills in title, artist, cover, key and tempo" },
+        ]}
+        screenshots={[
+          { src: s("mixer"), alt: "Mixer with a fader per part" },
+          { src: s("new-song"), alt: "New song with cover and details" },
+        ]}
+        reverse
+        badge="New in 2.x"
+      />
+
+      <FeatureShowcase
+        title="See where your voice"
+        highlight="sits"
+        description="Sing along and watch your pitch against every line of the lyrics. Voice Fit compares your range to the song and tells you which key makes it comfortable."
+        bullets={[
+          { icon: Activity, text: "Live pitch on the lyrics, in cents from the target note" },
+          { icon: Target, text: "Voice Fit shows your core range, the song's tessitura and the key change that suits you" },
+          { icon: Music, text: "Detected key and tempo for any song you import" },
+        ]}
+        screenshots={[
+          { src: s("song-pitch"), alt: "Lyrics with live pitch" },
+          { src: s("voice-fit"), alt: "Voice Fit range and tessitura" },
+        ]}
+        badge="New in 2.x"
       />
 
       {/* Annotations */}
@@ -46,8 +86,12 @@ const FeatureSections = () => {
           { icon: Clock, text: "Tap-to-time sync lets lyrics auto-scroll at your own pace during playback" },
         ]}
         screenshots={[
-          { src: screenshotAnnotatedSong, alt: "Song with colored annotations" },
-          { src: screenshotAnnotateSheet, alt: "Annotation sheet with tag options" },
+          ...(ios
+            ? [
+                { src: screenshotAnnotatedSong, alt: "Song with colored annotations" },
+                { src: screenshotAnnotateSheet, alt: "Annotation sheet with tag options" },
+              ]
+            : [{ src: s("song-pitch"), alt: "Song with colored annotations" }]),
         ]}
         reverse
         darkBg
@@ -64,8 +108,12 @@ const FeatureSections = () => {
           { icon: Bookmark, text: "Share recordings with your teacher or students for review anytime" },
         ]}
         screenshots={[
-          { src: screenshotLessonRec, alt: "Lesson recording with markers" },
-          { src: screenshotLessonDetail, alt: "Lesson playback with waveform" },
+          ...(ios
+            ? [
+                { src: screenshotLessonRec, alt: "Lesson recording with markers" },
+                { src: screenshotLessonDetail, alt: "Lesson playback with waveform" },
+              ]
+            : [{ src: s("studio"), alt: "Studio sessions" }]),
         ]}
       />
 
@@ -73,10 +121,10 @@ const FeatureSections = () => {
       <ExportSection />
 
       {/* Apple Watch & Widgets */}
-      <WatchSection />
+      {ios && <WatchSection />}
 
       {/* iPad */}
-      <IpadSection />
+      {ios && <IpadSection />}
 
       {/* Setlists — last */}
       <FeatureShowcase
@@ -88,10 +136,15 @@ const FeatureSections = () => {
           { icon: Timer, text: "Estimated total duration, tempo range, and key overview per setlist" },
           { icon: Mic, text: "Cue-by-cue playback mode guides you through the entire show" },
           { icon: Palette, text: "Full dark-mode support keeps your screen glare-free on stage" },
+          { icon: Car, text: `Hear then sing from ${car}: the next line plays, then it's your turn` },
         ]}
         screenshots={[
-          { src: screenshotSetlist, alt: "Setlist overview with stats" },
-          { src: screenshotSetlistCue, alt: "Stage cue during playback" },
+          ...(ios
+            ? [
+                { src: screenshotSetlist, alt: "Setlist overview with stats" },
+                { src: screenshotSetlistCue, alt: "Stage cue during playback" },
+              ]
+            : [{ src: s("setlists"), alt: "Setlists" }]),
         ]}
         badge="New"
         backgroundImage={stagePhoto}

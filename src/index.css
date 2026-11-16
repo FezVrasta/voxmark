@@ -87,4 +87,8 @@
   .phone-mockup {
     @apply rounded-[2.5rem] border-[6px] border-muted overflow-hidden shadow-2xl;
   }
+
+  [data-platform="android"] .phone-mockup {
+    @apply rounded-[1.5rem];
+  }
 }
