@@ -5,6 +5,7 @@ export type Platform = "ios" | "android";
 
 export const APP_STORE_URL = "https://apple.co/3NNYhjl";
 export const ANDROID_TESTERS_URL = "https://groups.google.com/g/voxmark-testers";
+export const ANDROID_OPTIN_URL = "https://play.google.com/apps/testing/com.federicozivolo.voxmark";
 
 const KEY = "voxmark-platform";
 

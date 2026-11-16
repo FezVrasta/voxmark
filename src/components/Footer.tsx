@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ANDROID_TESTERS_URL } from "@/context/Platform";
+import AndroidBetaDialog from "@/components/AndroidBetaDialog";
 
 const Footer = () => {
   return (
@@ -8,7 +8,9 @@ const Footer = () => {
         <span className="font-display font-semibold text-foreground">VoxMark</span>
         <div className="flex items-center gap-4">
           <span>© {new Date().getFullYear()} VoxMark. Free, no ads.</span>
-          <a href={ANDROID_TESTERS_URL} target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">Android beta</a>
+          <AndroidBetaDialog>
+            <button type="button" className="hover:text-foreground transition-colors">Android beta</button>
+          </AndroidBetaDialog>
           <Link to="/privacy" className="hover:text-foreground transition-colors">Privacy</Link>
         </div>
       </div>

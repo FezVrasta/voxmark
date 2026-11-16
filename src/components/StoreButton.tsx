@@ -1,4 +1,5 @@
-import { usePlatform, APP_STORE_URL, ANDROID_TESTERS_URL } from "@/context/Platform";
+import { usePlatform, APP_STORE_URL } from "@/context/Platform";
+import AndroidBetaDialog from "@/components/AndroidBetaDialog";
 
 const cls =
   "inline-flex items-center justify-center gap-2 rounded-full bg-foreground text-background px-8 py-4 font-display font-semibold text-base hover:opacity-90 transition-opacity";
@@ -8,12 +9,14 @@ const StoreButton = ({ short = false }: { short?: boolean }) => {
 
   if (platform === "android") {
     return (
-      <a href={ANDROID_TESTERS_URL} target="_blank" rel="noopener noreferrer" className={cls}>
+      <AndroidBetaDialog>
+      <button type="button" className={cls}>
         <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
           <path d="M3.6 2.3c-.2.2-.3.5-.3.9v17.6c0 .4.1.7.3.9l.1.1 9.9-9.9v-.2L3.7 2.2l-.1.1zM17 15.3l-3.3-3.3v-.2L17 8.5l.1.1 3.9 2.2c1.1.6 1.1 1.7 0 2.3l-3.9 2.2h-.1zM17.1 15.2 13.7 11.9 3.6 22c.4.4 1 .4 1.7.1l11.8-6.9M17.1 8.6 5.3 1.8C4.6 1.4 4 1.5 3.6 1.9l10.1 10.1 3.4-3.4z" />
         </svg>
         {short ? "Join the Android beta" : "Join the Android beta on Google Play"}
-      </a>
+      </button>
+      </AndroidBetaDialog>
     );
   }
 
