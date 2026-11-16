@@ -1,4 +1,5 @@
-import { createContext, useContext, useEffect, useState, type ReactNode } from "react";
+import { createContext, useContext, useEffect, type ReactNode } from "react";
+import { useSearchParams } from "react-router-dom";
 
 export type Platform = "ios" | "android";
 
@@ -21,13 +22,22 @@ const PlatformContext = createContext<{ platform: Platform; setPlatform: (p: Pla
 });
 
 export const PlatformProvider = ({ children }: { children: ReactNode }) => {
-  const [platform, setPlatformState] = useState<Platform>(detect);
+  const [params, setParams] = useSearchParams();
+  const fromUrl = params.get("platform");
+  const platform: Platform = fromUrl === "ios" || fromUrl === "android" ? fromUrl : detect();
 
   const setPlatform = (p: Platform) => {
-    setPlatformState(p);
     try {
       localStorage.setItem(KEY, p);
     } catch {}
+    setParams(
+      (prev) => {
+        const next = new URLSearchParams(prev);
+        next.set("platform", p);
+        return next;
+      },
+      { replace: true },
+    );
   };
 
   useEffect(() => {

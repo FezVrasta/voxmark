@@ -12,20 +12,20 @@ const queryClient = new QueryClient();
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
-    <PlatformProvider>
     <TooltipProvider>
       <Toaster />
       <Sonner />
       <HashRouter>
+        <PlatformProvider>
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/privacy" element={<Privacy />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
+      </PlatformProvider>
       </HashRouter>
     </TooltipProvider>
-    </PlatformProvider>
   </QueryClientProvider>
 );
 
