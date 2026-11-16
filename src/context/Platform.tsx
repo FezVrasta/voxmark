@@ -4,7 +4,7 @@ import { useSearchParams } from "react-router-dom";
 export type Platform = "ios" | "android";
 
 export const APP_STORE_URL = "https://apple.co/3NNYhjl";
-export const ANDROID_TESTERS_URL = "https://play.google.com/apps/internaltest/4701440086323063382";
+export const ANDROID_TESTERS_URL = "https://groups.google.com/g/voxmark-testers";
 
 const KEY = "voxmark-platform";
 
